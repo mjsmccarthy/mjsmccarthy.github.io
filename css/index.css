@@ -125,7 +125,7 @@ body {
 @media only screen and (max-width: 768px) {
     .wrapper { min-width: 500px; }
     .wrap { column-count: 1; }
-    .nav-image { min-width: 500px; }
+    .nav-image { min-width: 500px; min-height: 250px; }
     .footer { min-width: 500px; }
     .right-col { padding: 10px; margin: 0}
     .left-col { padding: 10px; margin: 0 }
