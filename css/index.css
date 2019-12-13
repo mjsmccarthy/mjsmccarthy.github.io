@@ -153,8 +153,6 @@ body {
 
 @media only screen and (max-width: 1024px) {
     body, html { height: 100%; }
-    .nav-image { background-attachment: scroll; }
-    .nav-image2 { background-attachment: scroll; }
     .wrapper { max-width: 700px; }
     .wrap { column-count: 2; column-width: 300px; }
     .right-col { display: block; padding-top: 40px; margin-top: 0; margin-bottom: 10px; }
