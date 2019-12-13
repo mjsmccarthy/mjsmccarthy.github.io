@@ -110,7 +110,7 @@ body {
 .header {
     padding-top: 10px;
     padding-bottom: 10px;
-    background: #555555;
+    background: rgb(33, 33, 33);
     color: #f1f1f1;
 }
 
