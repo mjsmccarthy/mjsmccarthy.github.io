@@ -1,5 +1,6 @@
+body, html { height: 100%; }
+
 h1 {
-    padding-top: 20px;
     text-align: center;
     margin: 0;
 }
@@ -16,12 +17,17 @@ figcaption {
 
 .nav-image {
     width: 100%;
-    height: 500px;
+    height: 100%;
+    border-bottom: 1px solid #000000;
+
+    /* Image used */
     background-image: url(../images/landscape.jpg);
+
+    /* Parallax scrolling effect */
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
 .nav {
@@ -37,37 +43,47 @@ figcaption {
     text-decoration: none;
 }
 
-.nav a:link { color: #000000; }
+.nav a:link { color: #f1f1f1; }
 
-.nav a:visited { color: #5a5a5a; }
+.nav a:visited { color: #dddddd; }
 
-.nav a:hover {
-    color: #869DC7;
-    background-color: #EAEAEA;
+.nav a:hover { color: #869DC7; background-color: #EAEAEA; }
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #555555;
+    color: #f1f1f1;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .wrap {
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    column-count: 2;
-    column-width: 400px;
-    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.left-col {
+    margin: auto;
 }
 
 .right-col {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     width: 300px;
     text-align: center;
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
 }
 
-figcaption {
-    text-align: center;
-}
+figcaption { text-align: center; }
 
 #img1 {
     display: block;
@@ -78,6 +94,8 @@ figcaption {
 }
 
 .footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
     background-color: #dddddd;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -85,13 +103,18 @@ figcaption {
     border-bottom: 1px solid #000000;
     text-align: center;
     font-size: 10px;
-    padding: 20px 20px;
-    column-count: 3;
+    padding: 20px;
 }
 
+.grid-item {
+    margin: auto;
+}
 
 @media only screen and (max-width: 1024px) {
-    .wrap { min-width: 500px; column-count: 1; }
-    .right-col { padding: 10px; margin-top: 0; margin-bottom: 0; }
-    .left-col { padding: 10px; }
+    #img1 { width: 249px; height: 373px; }
+}
+
+@media only screen and (max-width: 768px) {
+    .left-col { display: none; }
+    .wrap { grid-template-columns: auto; gap: 10px; }
 }

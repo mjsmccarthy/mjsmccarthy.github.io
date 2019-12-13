@@ -3,15 +3,18 @@
     <head>
         <link rel="stylesheet" href="css/about.css">
         <link rel="icon" href="images/photo-camera.png" type="image/ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
         <div class="nav-image">
-            <h1>Photography by Photomattic</h1>
-            <div class="nav">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+            <div class="header" id="myHeader">
+                <h1>Photography by Photomattic</h1>
+                <div class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
             </div>
         </div>
 
@@ -45,15 +48,26 @@
         </div>
 
         <div class="footer">
-            <p>Copyright &copy; 2019</p>
-            <p>
-                Photography by Photomattic <br>
-                1111 W. Main St, <br>
-                Richmond, VA, 23284 <br>
-            </p>
-            <p>
-                <br> Socials
-            </p>
+            <div class="grid-item">Copyright &copy; 2019</div>
+            <div class="grid-item">Photography by Photomattic <br> 1111 W. Main St, <br> Richmond, VA, 23284 <br></div>
+            <div class="grid-item">Socials</div>
         </div>
+        
+        <div class="nav-image"></div>
+
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+                } else {
+                header.classList.remove("sticky");
+                }
+            }
+        </script>
     </body>
 </html>
