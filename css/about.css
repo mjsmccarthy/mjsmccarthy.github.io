@@ -128,9 +128,13 @@ figcaption { text-align: center; }
 
 @media only screen and (max-width: 1024px) {
     #img1 { width: 249px; height: 373px; }
+    .nav-image { background-attachment: scroll; }
+    .nav-image2 { background-attachment: scroll; }
 }
 
 @media only screen and (max-width: 768px) {
+    .nav-image { background-attachment: scroll; }
+    .nav-image2 { background-attachment: scroll; }
     .left-col { display: none; }
     .wrap { grid-template-columns: auto; gap: 10px; }
 }
